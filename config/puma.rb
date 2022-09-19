@@ -1,9 +1,9 @@
 root = "#{Dir.getwd}"
 
-bind "unix://#{root}/tmp/puma/socket"
-pidfile "#{root}/tmp/puma/pid"
-state_path "#{root}/tmp/puma/state"
+bind "unix://#{root}/tmp/puma.sock"
+pidfile "#{root}/tmp/pids/puma.pid"
 rackup "#{root}/config.ru"
+state_path "#{root}/tmp/pids/puma.state"
 
 threads 4, 8
 
