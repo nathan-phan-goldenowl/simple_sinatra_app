@@ -1,14 +1,20 @@
 require 'rubygems'
 require 'sinatra'
 
-get '/' do
-  "Hello and Goodbye"
-end
+configure {
+  set :server, :puma
+}
 
-get '/hi' do
-  "Hello World! :)"
-end
+class App < Sinatra::Base
+  get '/' do
+    "Hello and Goodbye"
+  end
 
-get '/bye' do
-  "Goodbye World! :("
+  get '/hi' do
+    "Hello World! :)"
+  end
+
+  get '/bye' do
+    "Goodbye World! :("
+  end
 end
