@@ -1,5 +1,3 @@
-require 'puma/daemon'
-
 root = "#{Dir.getwd}"
 
 bind "unix://#{root}/tmp/puma.sock"
