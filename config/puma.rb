@@ -9,5 +9,5 @@ state_path "#{root}/tmp/pids/puma.state"
 
 threads 4, 8
 
-activate_control_app
 daemonize true
+activate_control_app
