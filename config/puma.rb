@@ -1,4 +1,4 @@
-# require 'puma/daemon'
+require 'puma/daemon'
 
 root = "#{Dir.getwd}"
 
@@ -9,5 +9,5 @@ state_path "#{root}/tmp/pids/puma.state"
 
 threads 4, 8
 
-# daemonize true
+daemonize true
 activate_control_app
